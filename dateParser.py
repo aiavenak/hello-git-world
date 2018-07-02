@@ -10,4 +10,11 @@ mi = str(now.minute)
 ss = str(now.second)
 print mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss
 
+print "-" * 25
+
+hostname = socket.gethostname()   
+IPAddr = socket.gethostbyname(hostname)   
+print("Your Computer Name is:" + hostname)   
+print("Your Computer IP Address is:" + IPAddr)   
+
 
