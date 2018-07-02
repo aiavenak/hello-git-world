@@ -1,22 +1,26 @@
-from datetime import datetime
 import socket   
 
-print "This is a simple example"
-now = datetime.now()
-mm = str(now.month)
-dd = str(now.day)
-yyyy = str(now.year)
-hour = str(now.hour)
-mi = str(now.minute)
-ss = str(now.second)
-print "the date is: "
-print mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss
+import numpy as np
+import matplotlib.pyplot as plt
 
-print "-" * 25
+print "-" * 15
+print "computer name and IP address Example"
+print "-" * 15
 
 hostname = socket.gethostname()   
 IPAddr = socket.gethostbyname(hostname)   
 print("Your Computer Name is:" + hostname)   
 print("Your Computer IP Address is:" + IPAddr)   
+
+print "-" * 15
+print "How to plot simple functions"
+print "-" * 15
+
+# evenly sampled time at 200ms intervals
+t = np.arange(0., 5., 0.2)
+
+# red dashes, blue squares and green triangles
+plt.plot(t, t, 'r--', t, t**2, 'bs', t, t**3, 'g^')
+plt.show()
 
 
