@@ -11,3 +11,5 @@ Example of Git workflow:
 
 -Open and merge a pull request
 
+Added more line delimiters 
+
